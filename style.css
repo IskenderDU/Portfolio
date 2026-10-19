@@ -1,5 +1,7 @@
+
 body {
      background-color: #1e1e1e;
+     color: white;
 }
 
 #My-name {
@@ -18,6 +20,7 @@ body {
 h2 {
    font-family: Inter;
    font-weight: bolder;
+   font-size: 54px;
 }
 
 #buttons {
@@ -31,4 +34,14 @@ h2 {
     border-radius: 40px;
     height: 55px;
     width: 216px;
+}
+
+input {
+    background-color: #1e1e1e;
+}
+
+.description {
+    font-family: Inter;
+    font-size: 18px;
+    color: #c1c1c1;
 }
