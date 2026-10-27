@@ -10,6 +10,7 @@ body {
     font-size: 32px;
     color: #ffff;
     margin-left: 265px;
+    margin-right: 60px;
 }
 
 nav {
@@ -60,7 +61,7 @@ h2 {
 .nav-links {
     display: flex;
     gap: 30px;
-    margin-left: 180px;
+    margin-right: 90px;
 }
 .nav-links a {
     color: #c1c1c1;
