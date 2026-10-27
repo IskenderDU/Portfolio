@@ -18,18 +18,36 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     </div>
 </head>
 <body>
-    <header>
-        <nav><p id="Home"><span id="My-name">Iskender</span> <span id="nav"><a href="#Home">Home </a><a href="#About">About me </a><a href="#Studies">Studies </a><a href="#Projects">Projects </a><a href="#Contacts">Contacts</a><button></span><img src="Screenshot 2026-10-13 132215.png" alt="Light Theme" width="50px"></button></p>
-        </nav>
+    <header class="navbar">
+        <div class="nav-left">
+            <div class="logo"><p>Iskender</p></div>
+            <nav class="nav-links">
+                <a href="#About">About</a>
+                <a href="#Studies">Studies</a>
+                <a href="#Projects">Projects</a>
+                <a href="#Contacts">Contacts</a>
+            </nav>
+                </div>
+
+                <a href="#Contacts" class="btn-contact">Contact Me</a>
+                <div class="theme-toggle-container">
+                <button class="theme-toggle" aria-label="Toggle theme"><img src="imgs/Group.svg" alt="theme"></button>
+                </div>
     </header>
     <main>
-        <section>
+        <section id="Home">
+            <img src="imgs/Rectangle 3.svg" alt="background" class="background-image">
+            <img src="imgs/Ellipse 5.svg" alt="profile" class="profile-image">
         <h1>Duulatbekov Iskender</h1>
-        <p>IT Student👨‍🎓</p>
-        <p>As a student at Ala-Too International University and a passionate data scientist, <br>
+        <p><span id="student-title">IT Student</span><span id="sticker">👨‍🎓</span></p>
+        <p id="description-student">As a student at Ala-Too International University and a passionate data scientist, <br>
          I have a deep interest in machine learning, artificial intelligence, and data analysis. I excel at exploring complex <br>
          information landscapes and spotting meaningful patterns that drive innovation and create new opportunities.</p>
          <p><button class="top-buttons">Contact me</button></p>

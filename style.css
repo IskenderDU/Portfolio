@@ -1,26 +1,131 @@
 
 body {
-     background-color: #1e1e1e;
+     background-color: #1a1a1a;
      color: white;
+     font-family: Inter;
 }
 
-#My-name {
+.logo {
     font-family: Oleo Script;
     font-size: 32px;
     color: #ffff;
+    margin-left: 265px;
 }
 
-#nav {
-    padding: 50px;
-    gap: 100px;
+nav {
     font-family: Montserrat;
+    color: #c1c1c1;
+    gap: 163px;
+}
+
+h1 {
+    font-family: poppins;
+    font-weight: bolder;
+    font-size: 64px;
+    margin-bottom: 0px;
+}
+
+a {
+    text-decoration: none;
     color: #c1c1c1;
 }
 
 h2 {
    font-family: Inter;
    font-weight: bolder;
-   font-size: 54px;
+   font-size: 45px;
+}
+#Home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: poppins;
+    margin-top: 100px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+}
+
+.nav-left{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+    margin-left: 180px;
+}
+.nav-links a {
+    color: #c1c1c1;
+    text-decoration: none;
+    font-family: Montserrat;
+    font-size: 18px;
+    width: 75px;
+    height: 22px;
+}
+.nav-links a:hover {
+    color: #4FC3F7;
+}
+.btn-contact {
+    margin-left: 60px;
+    padding: 14px 18px;
+    font-family: Montserrat;
+    color: #ffffff;
+    text-decoration: none;
+    border: 1.5px solid #4FC3F7;
+    border-radius: 9px;
+    font-size: 15px;
+}
+
+#student-title {
+    font-family: poppins;
+    font-weight: 600;
+    font-size: 30px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    background: linear-gradient(90deg,rgba(79, 195, 247, 1) 0%, rgba(255, 255, 255, 1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+#sticker {
+    font-size: 26px;
+    margin-left: 5px;
+}
+
+#description-student {
+    font-family: poppins;
+    font-weight: medium;
+    font-size: 19px;
+    text-align: center;
+    margin-top: 4px;
+
+}
+
+.contact-button {
+    color: white;
+    background-color: #1e1e1e;
+    border-color: #4FC3F7;
+    font-family: Montserrat;
+    border-radius: 9px;
+    width: 126px;
+    height: 45px;
+}
+
+.background-image {
+    position: absolute;
+    top: 170px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: linear-gradient(90deg,rgba(26, 26, 26, 1) 0%, rgba(26, 26, 26, 0.65) 100%);
 }
 
 #buttons {
@@ -31,9 +136,12 @@ h2 {
     color: white;
     background-color: #1e1e1e;
     border-color: #4FC3F7;
+    font-family: Montserrat;
     border-radius: 40px;
+    font-size: 15px;
     height: 55px;
     width: 216px;
+    margin-top: 4px;
 }
 
 input {
@@ -41,7 +149,24 @@ input {
 }
 
 .description {
+    text-align: center;
     font-family: Inter;
-    font-size: 18px;
+    font-size: 14px;
     color: #c1c1c1;
+    font-weight: 600;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    background: linear-gradient(90deg,rgba(79, 195, 247, 1) 0%, rgba(255, 255, 255, 1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#About {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    font-family: poppins;
+    margin-top: 249px;
 }
