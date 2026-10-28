@@ -9,8 +9,8 @@ body {
     font-family: Oleo Script;
     font-size: 32px;
     color: #ffff;
-    margin-left: 265px;
-    margin-right: 60px;
+    margin-left: 120px;
+    margin-right: 20px;
 }
 
 nav {
@@ -50,18 +50,19 @@ h2 {
     justify-content: space-between;
     align-items: center;
     padding: 20px 60px;
+    margin-top: -20px;
 }
 
 .nav-left{
     display: flex;
     align-items: center;
-    gap: 50px;
+    gap: 150px;
 }
 
 .nav-links {
     display: flex;
-    gap: 30px;
-    margin-right: 90px;
+    gap: 50px;
+    margin-right: 0px;
 }
 .nav-links a {
     color: #c1c1c1;
@@ -74,8 +75,9 @@ h2 {
 .nav-links a:hover {
     color: #4FC3F7;
 }
+
 .btn-contact {
-    margin-left: 60px;
+    margin-left: 0px;
     padding: 14px 18px;
     font-family: Montserrat;
     color: #ffffff;
@@ -83,6 +85,16 @@ h2 {
     border: 1.5px solid #4FC3F7;
     border-radius: 9px;
     font-size: 15px;
+}
+.btn-contact:hover {
+    background-color: #4FC3F7;
+    color: #ffffff;
+    border: none;
+}
+
+.theme-toggle {
+    background-color: transparent;
+    border: none;
 }
 
 #student-title {
@@ -106,6 +118,7 @@ h2 {
     font-size: 19px;
     text-align: center;
     margin-top: 4px;
+    margin-bottom: 0px;
 
 }
 
@@ -144,6 +157,12 @@ h2 {
     width: 216px;
     margin-top: 4px;
 }
+.top-buttons:hover {
+    background-color: #4FC3F7;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+}
 
 input {
     background-color: #1e1e1e;
@@ -155,7 +174,7 @@ input {
     font-size: 14px;
     color: #c1c1c1;
     font-weight: 600;
-    margin-top: 0px;
+    margin-top: -40px;
     margin-bottom: 0px;
     background: linear-gradient(90deg,rgba(79, 195, 247, 1) 0%, rgba(255, 255, 255, 1) 100%);
     -webkit-background-clip: text;
@@ -168,6 +187,20 @@ input {
     align-items: center;
     text-align: center;
     justify-content: center;
-    font-family: poppins;
-    margin-top: 249px;
+    font-family: Inter;
+    font-size: 18px;
+    margin-top: 200px;
+}
+
+#Studies {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    font-family: Inter;
+    margin-top: 200px;
+}
+.top-row {
+    border: 2px solid #2b2b2b;
 }
