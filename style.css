@@ -193,6 +193,75 @@ input {
 }
 
 #Studies {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 289px;
+    height: 274px;
+    background-color: #1a1a1a;    
+    border: 1px solid #2b2b2b;
+    border-radius: 10px;
+    padding: 24px;
+    text-align: left
+}
+.card-icon {
+    
+}
+.card h4{
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 18px;
+}
+.card p {
+    font-size: 14px;
+    font-weight: normal;
+    margin-bottom: -24px;
+    color: #e1e1e1;
+}
+.card-image {
+    padding: 0 !important;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#Projects {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -201,6 +270,38 @@ input {
     font-family: Inter;
     margin-top: 200px;
 }
-.top-row {
-    border: 2px solid #2b2b2b;
+
+#Contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    font-family: Inter;
+    margin-top: 200px;
+}
+#inputFieldset {
+    border: none;
+
+}
+.form-input {
+    border: 1px solid #CBD3E8;
+    border-radius: 10px;
+    width: 600px;
+    height: 60px;
+}
+.form-input::placeholder {
+    font-size: 20px;
+    color: #8987A1;
+    font-weight: 400;
+}
+
+
+label {
+    font-family: Inter;
+    font-size: 18px;
+    color: #ffffff;
+    font-weight: 700;
+    margin-right: 550px;
+    margin-bottom: 90px;
 }

@@ -74,56 +74,63 @@ Let's work together to transform your data into actionable insights that drive r
          <section id="Studies">
             <h2>What am I learning now</h2>
             <p class="description">My studies</p>
-            <div class="top-row"> <!--Верхняя строка карточек-->
-            <div> <!-- Первая карточка-->
+            <div class="cards-container">
+            <div class="card"> <!-- Первая карточка-->
+                <div class="card-icon"><img src="imgs/Studies-Icon.svg" alt="Card-Icon"></div>
                 <h4>Java Language</h4> 
-                <p>Learning the Java programming language, <br>
-                 gaining fundamental knowledge of conditions,<br>
-                  loops, methods, basic syntax, and the fundamentals of <br>
-                   object-oriented programming. I plan to use this <br>
+                <p>Learning the Java programming language,
+                 gaining fundamental knowledge of conditions,
+                  loops, methods, basic syntax, and the fundamentals of
+                   object-oriented programming. I plan to use this
                     language as a backend developer.</p>
             </div>
 
-            <div> <!-- Вторая карточка-->
+            <div class="card"> <!-- Вторая карточка-->
+                <div class="card-icon"><img src="imgs/Studies-Icon.svg" alt="Card-Icon"></div>
                 <h4>HTML & CSS</h4>
-                <p>HTML creates the website's framework, <br>
-                 while CSS provides its appearance. These elements are <br>
-                 needed to transfer the design from Figma to code, configure <br>
-                 responsiveness for any screen size, <br>
+                <p>HTML creates the website's framework, 
+                 while CSS provides its appearance. These elements are 
+                 needed to transfer the design from Figma to code, configure
+                 responsiveness for any screen size, 
                  and create the foundation for future JavaScript additions.</p>
             </div>
 
-            <div> <!--Третья карточка-->
+            <div class="card"> <!--Третья карточка-->
+                <div class="card-icon"><img src="imgs/Studies-Icon.svg" alt="Card-Icon"></div>
                 <h4>JavaScript</h4>
-                <p>JavaScript brings a website to life by adding interactivity <br>
-                 (animations, pop-ups, click processing, and dynamic data updates). <br>
-                 It's essential for transforming a static HTML/CSS layout <br>
-                  into a fully functioning application and becoming the <br>
+                <p>JavaScript brings a website to life by adding interactivity 
+                 (animations, pop-ups, click processing, and dynamic data updates). 
+                 It's essential for transforming a static HTML/CSS layout 
+                  into a fully functioning application and becoming the 
                    foundation for your growth in web development.</p>
             </div>
-            </div>
 
-            <div class="low-row"> <!--Нижняя строка карточек-->
-                <div><!--Первая карточка нижней строки-->
+                <div class="card"><!--Первая карточка нижней строки-->
+                    <div class="card-icon"><img src="imgs/AI Icon.svg" alt="Card-Icon"></div>
                     <h4>Data Science & AI</h4>
-                    <p>Data science and AI are fields I'm just casually <br>
-                     interested in for now, as they represent the future of IT. <br>
-                     I'm drawn to the opportunity to train neural networks, <br>
-                     find patterns in data, and create intelligent systems. <br>
-                      These are very promising areas, and I'm considering <br>
-                       working as a data scientist or AI specialist for my future career, <br>
+                    <p>Data science and AI are fields I'm just casually 
+                     interested in for now, as they represent the future of IT. 
+                     I'm drawn to the opportunity to train neural networks, 
+                     find patterns in data, and create intelligent systems. 
+                      These are very promising areas, and I'm considering 
+                       working as a data scientist or AI specialist for my future career, 
                         so I can create cool high-tech products.</p>
                 </div>
 
-                <div> <!--Вторая краточка нижней строки-->
+                <div class="card-image">
+                    <div class="card-image"><img src="imgs/Rectangle 40.svg" alt=""></div>
+                </div>
+
+                <div class="card"> <!--Вторая краточка нижней строки-->
+                    <div class="card-icon"><img src="imgs/ML Icon.svg" alt="Card-Icon"></div>
                     <h4>Professional Math</h4>
-                    <p>Professional mathematics is a fundamental foundation that <br>
-                    enhances logic and thinking. It's a powerful tool <br>
-                    for designing complex systems, algorithms, and working <br>
-                    with artificial intelligence. I plan to use it in my future work <br>
+                    <p>Professional mathematics is a fundamental foundation that
+                    enhances logic and thinking. It's a powerful tool 
+                    for designing complex systems, algorithms, and working 
+                    with artificial intelligence. I plan to use it in my future work 
                     to solve complex problems and create truly cool, optimized products.</p>
                 </div>
-                </div>
+            </div>
          </section>
 
          <section id="Projects">
@@ -175,15 +182,15 @@ Let's work together to transform your data into actionable insights that drive r
          <section id="Contacts">
             <h2>Get In Touch</h2>
             <p class="description">Lets work together</p>
-            <fieldset>
+            <fieldset id="inputFieldset">
                 <p><label for="Name">Name</label><br>
-                <input type="text" id="Name" name="Name" size="70" placeholder="     Full name"></p>
+                <input class="form-input" type="text" id="Name" name="Name" size="70" placeholder="     full name"></p>
 
                 <p><label for="Email">Email</label><br>
-                <input type="text" id="email" name="email" size="70" placeholder="     example@gmail.com"></p>
+                <input class="form-input" type="text" id="email" name="email" size="70" placeholder="     example@gmail.com"></p>
 
                 <p><label for="Service">Service</label><br>
-                <select name="service" id="service" required>
+                <select class="form-input" name="service" id="service" required>
                     <option value="" disabled selected hidden>Select a service</option>
                     <option value="Java">Java</option>
                     <option value="HTML & CSS">HTML & CSS</option>
@@ -191,17 +198,17 @@ Let's work together to transform your data into actionable insights that drive r
                 </select></p>
 
                 <p><label for="Message">Message</label><br>
-                <textarea name="message" id="message" rows="6" cols="66"></textarea></p>
+                <textarea class="form-input" name="message" id="message" rows="6" cols="66"></textarea></p>
                 <button class="getNtouch">Get In Touch</button>
             </fieldset>
+         </section>
 
-            <h1>Let's <br>
+         <h1>Let's <br>
             Work Together -</h1>
             <div class="email-badge">
              <img src="*******" alt="" class="badge-icon">
              <span class="badge-text">duulatbekoviskender1@gmail.com</span>
             </div>
-         </section>
     </main>
 
     <hr>
