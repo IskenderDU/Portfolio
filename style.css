@@ -192,28 +192,41 @@ input {
     margin-top: 200px;
 }
 
+
+
 #Studies {
+    margin-top: 220px;
     padding: 60px 20px;
     text-align: center;
+}
+
+#Studies .description {
+    margin-top: -37px;
 }
 
 .cards-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    column-gap: 70px;
+    row-gap: 20px;
     max-width: 1200px;
     margin: 0 auto;
+    margin-top: 80px;
+    margin-right: 274px;
+    margin-left: 274px;
 }
 .card {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    width: 289px;
-    height: 274px;
-    background-color: #1a1a1a;    
-    border: 1px solid #2b2b2b;
+    width: 100%;
+    height: 260px;
+    border: 1px solid #313131;
+    background: #1C1C1C;
+    background: linear-gradient(96deg in oklch, #2b2b2b 0%, #1c1c1c 100%);   
     border-radius: 10px;
     padding: 24px;
+    padding-bottom: -12px;
     text-align: left
 }
 .card-icon {
@@ -230,32 +243,51 @@ input {
     margin-bottom: -24px;
     color: #e1e1e1;
 }
-.card-image {
-    padding: 0 !important;
-    overflow: hidden;
+.low-row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 20px;
+    row-gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-right: 274px;
+    margin-left: 274px;
+}
+.cardWithImage {
     display: flex;
+    flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    gap: 20px;
+    width: 588px;
+    height: 260px;
+    border: 1px solid #313131;
+    background: #1C1C1C;
+    background: linear-gradient(96deg in oklch, #2b2b2b 0%, #1c1c1c 100%);   
+    border-radius: 10px;
+    padding: 24px;
+    padding-bottom: 24px;
+    text-align: left
+}
+.cardWithImage-content {
+    font-size: 14px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+.card-image {
+    width: 234px;
+    height: 218px;
+    flex-shrink: 0;
+    overflow: hidden;
 }
 .card-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -270,6 +302,13 @@ input {
     font-family: Inter;
     margin-top: 200px;
 }
+.project-cards {
+    
+}
+    
+
+
+
 
 #Contacts {
     display: flex;
