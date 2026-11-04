@@ -302,8 +302,11 @@ input {
     font-family: Inter;
     margin-top: 200px;
 }
-.project-cards {
-    
+.project-tags {
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: normal;
+    border: 1px solid #f5f5f5;
 }
     
 
