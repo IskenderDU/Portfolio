@@ -457,7 +457,7 @@ select.form-input  {
     height: 62px;
     margin-top: 16px;
 }
-.getNtouch :hover {
+.getNtouch:hover {
     cursor: pointer;
 }
 footer {
