@@ -164,10 +164,6 @@ h2 {
     cursor: pointer;
 }
 
-input {
-    background-color: #1e1e1e;
-}
-
 .description {
     text-align: center;
     font-family: Inter;
@@ -293,20 +289,93 @@ input {
 
 
 
-#Projects {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-    font-family: Inter;
+#Projects { 
     margin-top: 200px;
+    text-align: center;
 }
 .project-tags {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 25px;
+    margin-top: 40px;
+}
+.project-tags button {
     font-family: Inter;
     font-size: 16px;
     font-weight: normal;
-    border: 1px solid #f5f5f5;
+    color: #a9a9a9; 
+    background-color: #1e1e1e;
+    border: 1px solid;
+    border-radius: 50px;
+    padding: 20px;
+}
+.project-tags button:hover {
+    color: #f5f5f5;
+    background-color: #484E53;
+    border-color: #484e53;
+}
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 40px;
+    row-gap: 130px;
+    max-width: 1200px;
+    margin: 80px auto 0 auto;
+}
+.project-cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 297px;  
+    text-align: left;
+}
+.project-cards h4 {
+    margin-top: 32px;
+    margin-bottom: 8px;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: Inter;
+    color: #c1c1c1;
+}
+.project-cards p {
+    font-family: Inter;
+    font-size: 19px;
+    font-weight: normal;
+    color: #a9a9a9;
+}
+.card-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.project-cards button {
+    border: none;
+    background-color: #4FC3F7;
+    border-radius: 50%;
+    cursor: pointer;
+    width: 45px;
+    height: 45px;
+}
+button img {
+    margin-top: 5px;
+    width: 27px;
+    height: 27px;
+}
+.low-buttons {
+    font-family: Montserrat;
+    font-size: 15px;
+    font-weight: 500;
+    background-color: transparent;
+    border: 1px solid #484e53;
+    color: #ffffff;
+    border-radius: 75px;
+    width: 210px;
+    height: 56px;
+    margin-top: 100px;
 }
     
 
@@ -318,32 +387,152 @@ input {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    justify-content: center;
     font-family: Inter;
     margin-top: 200px;
 }
 #inputFieldset {
+    width: 100%;
+    max-width: 600px;
     border: none;
+    padding: 0;
+    margin-top: 40px;
 
 }
-.form-input {
-    border: 1px solid #CBD3E8;
-    border-radius: 10px;
-    width: 600px;
-    height: 60px;
+.form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    margin-bottom: 20px;
 }
-.form-input::placeholder {
-    font-size: 20px;
-    color: #8987A1;
-    font-weight: 400;
-}
-
-
 label {
     font-family: Inter;
     font-size: 18px;
     color: #ffffff;
     font-weight: 700;
-    margin-right: 550px;
-    margin-bottom: 90px;
+    margin-bottom: 16px;
+}
+.form-input {
+    width: 100%;
+    height: 60px;
+    background-color: #1e1e1e;
+    border: 1px solid #CBD3E8;
+    border-radius: 10px;
+    padding: 0 20px;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: normal;
+    box-sizing: border-box;
+}
+textarea.form-input {
+    height: 222px;
+    padding-top: 0;
+    resize: vertical;
+}
+.form-input::placeholder {
+    color: #8987a1;
+    font-size: 16px;
+}
+select.form-input:invalid {
+    color: #8987a1;
+    padding-left: 43px;
+}
+select.form-input  {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url("data:image/svg+xml;utf8,<svg fill='%23ffffff' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
+    background-repeat: no-repeat;
+    background-position: right 22px center;
+}
+.getNtouch {
+    font-family: Raleway;
+    font-size: 16px;
+    font-weight: 700;
+    background-color: #ffffff;
+    border: 1px solid #ffffff;
+    color: #000000;
+    border-radius: 10px;
+    width: 100%;
+    height: 62px;
+    margin-top: 16px;
+}
+.getNtouch :hover {
+    cursor: pointer;
+}
+footer {
+    margin-top: 200px;
+}
+.email-badge {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 121px;
+    margin-top: 40px;
+}
+.email-badge a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    font-family: Inter;
+    font-size: 25px;
+    font-weight: normal;
+    color: #c9c9c9;
+    border: 2px solid #484e53;
+    width: 100%;
+    height: 76px;
+    padding-left: 27px;
+    border-radius: 15px;
+    margin-top: 60px;
+}
+.email-badge h1 {
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 63px;
+    color: #dedede;
+}
+hr {
+    border: none;
+    height: 1px;
+    background-color: #484e53;
+}
+
+.contact-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 42px;
+    margin-left: 149px;
+    margin-right: 149px;
+    margin-bottom: 20px;
+}
+.AllRights {
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: normal;
+    color: #a9a9a9;
+}
+.contacts {
+    display: flex;
+    justify-content: flex-end;
+    gap: 100px;
+}
+.contacts a{
+    margin-left: 21px;
+}
+
+
+
+
+@media (max-width: 768px) {
+    .contact-buttons {
+        margin-left: 20px;
+        margin-right: 20px;
+        justify-content: center; 
+    }
+}
+
+@media (max-width: 480px) {
+    .contacts {
+        gap: 20px;
+    }
 }

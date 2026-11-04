@@ -6,7 +6,11 @@
     <title>Portfolio</title>
     <link rel="stylesheet" href="style.css">
 
-    <div> <!--Шрифты-->
+    <div>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"> <!--Шрифты-->
+   
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oleo+Script:wght@400;700&display=swap" rel="stylesheet">
@@ -142,45 +146,65 @@ Let's work together to transform your data into actionable insights that drive r
             <h2>Projects</h2>
             <p class="description">Some of my work</p>
             <p class="project-tags">
-                
+                <button>Java</button>
+                <button>Web Developing</button>
             </p>
-
+            <div class="projects-container">
                 <!--Верхняя строка таблицы-->
                 <div class="project-cards">    <!--Первая вкладка-->
                     <img src="imgs/Projects-Image.svg" alt="1st Assignment">
                     <h4>1-st Assignment: Basic exercises</h4>
-                    <p><small>Basic Java</small> <button><img src="imgs/send.svg" alt="send-button"></button></p>
+                    <div class="card-bottom">
+                    <p><small>Basic Java</small></p>
+                    <p><button><img src="imgs/send.svg" alt="send-button"></button></p>
+                    </div>
                 </div>
 
                 <div class="project-cards">     <!--Вторая вкладка-->
                     <img src="imgs/Projects-Image.svg" alt="2nd Assignment">
                     <h4>2-nd Assignment: If-else Operators</h4>
-                    <p><small>Java: If-else exercises</small> <button><img src="imgs/send.svg" alt="send-button"></button></p>
+                    <div class="card-bottom">
+                    <p><small>Java: If-else exercises</small></p>
+                    <p><button><img src="imgs/send.svg" alt="send-button"></button></p>
+                    </div>
                 </div>
 
                 <div class="project-cards">      <!--Третья вкладка-->
                     <img src="imgs/Projects-Image2.svg" alt="3rd Assignment">
                     <h4>3-rd Assignment: Loops</h4>
-                    <p><small>Java: Loops</small> <button><img src="imgs/send.svg" alt="send-button"></button></p>
+                    <div class="card-bottom">
+                    <p><small>Java: Loops</small></p>
+                    <p><button><img src="imgs/send.svg" alt="send-button"></button></p>
+                    </div>
                 </div>
                
                 <!--Нижняя строка таблицы-->
                 <div class="project-cards">     <!--Первая вкладка нижней строки-->
                     <img src="imgs/Projects-Image3.svg" alt="4th Assignment">
                     <h4>4-th Assignment: Methods</h4>
-                    <p><small>Java: Methods</small> <button><img src="imgs/send.svg" alt="send-button"></button></p>
+                    <div class="card-bottom">
+                    <p><small>Java: Methods</small></p>
+                    <p><button><img src="imgs/send.svg" alt="send-button"></button></p>
+                    </div>
                 </div>
 
                 <div class="project-cards">     <!--Вторая вкладка нижней строки-->
                     <img src="imgs/Projects-Image4.svg" alt="Quiz: If-else">
                     <h4>Quiz: If-else</h4>
-                    <p><small>Java Quiz: If-else</small> <button><img src="imgs/send.svg" alt="send-button"></button></p>
+                    <div class="card-bottom">
+                    <p><small>Java Quiz: If-else</small></p>
+                    <p><button><img src="imgs/send.svg" alt="send-button"></button></p>
+                    </div>
                 </div>
 
                 <div class="project-cards">     <!--Третья вкладка нижней строки-->
                     <img src="imgs/Projects-Image5.svg" alt="Quiz: Loops">
                     <h4>Quiz: Loops</h4>
-                    <p><small>Java Quiz: Loops</small> <button><img src="imgs/send.svg" alt="send-button"></button></p>
+                    <div class="card-bottom">
+                    <p><small>Java Quiz: Loops</small></p>
+                    <p><button><img src="imgs/send.svg" alt="send-button"></button></p>
+                    </div>
+                </div>
                 </div>
             <button class="low-buttons">View All</button>
          </section>
@@ -189,45 +213,56 @@ Let's work together to transform your data into actionable insights that drive r
             <h2>Get In Touch</h2>
             <p class="description">Lets work together</p>
             <fieldset id="inputFieldset">
-                <p><label for="Name">Name</label><br>
-                <input class="form-input" type="text" id="Name" name="Name" size="70" placeholder="     full name"></p>
+                <div class="form-group">
+                <label for="Name">Name</label>
+                <input class="form-input" type="text" id="Name" name="Name" size="70" placeholder="     full name">
+                </div>
 
-                <p><label for="Email">Email</label><br>
-                <input class="form-input" type="text" id="email" name="email" size="70" placeholder="     example@gmail.com"></p>
+                <div class="form-group">
+                <label for="Email">Email</label>
+                <input class="form-input" type="text" id="email" name="email" size="70" placeholder="     example@gmail.com">
+                </div>
 
-                <p><label for="Service">Service</label><br>
+                <div class="form-group">
+                <label for="Service">Service</label>
                 <select class="form-input" name="service" id="service" required>
                     <option value="" disabled selected hidden>Select a service</option>
                     <option value="Java">Java</option>
                     <option value="HTML & CSS">HTML & CSS</option>
                     <option value="JavaScript">JavaScript</option>
-                </select></p>
+                </select>
+            </div>
 
-                <p><label for="Message">Message</label><br>
-                <textarea class="form-input" name="message" id="message" rows="6" cols="66"></textarea></p>
+                <div class="form-group">
+                <label for="Message">Message</label>
+                <textarea class="form-input" name="message" id="message" size="70"></textarea>
+                </div>
                 <button class="getNtouch">Get In Touch</button>
             </fieldset>
          </section>
-
-         <h1>Let's <br>
-            Work Together -</h1>
-            <div class="email-badge">
-             <img src="*******" alt="" class="badge-icon">
-             <span class="badge-text">duulatbekoviskender1@gmail.com</span>
-            </div>
     </main>
-
-    <hr>
 
 
     <footer>
-    <p>© 2026 All rights reserved.</p>
-    <div class="contact buttons">
-        <p><button><img src="" alt="linkedin"><a href=""></a></button>
-        <button><img src="" alt="basketball"></button>
-        <button><img src="" alt="facebook"></button>
-        <button><img src="" alt="instagram"></button>
-        <button><img src="" alt="twitter"></button></p>
+            <div class="email-badge">
+                <h1>Let's <br>
+            Work Together -</h1>
+             <p>
+             <a href="mailto:duulatbekoviskender1@gmail.com"><img src="imgs/skill-icons_gmail-light.svg" alt="mail" class="badge-icon">duulatbekoviskender1@gmail.com</a>
+             </p>
+            </div>
+
+            <hr>
+
+    <div class="contact-buttons">
+        <p><span class="AllRights">© 2026 All rights reserved.</p></span>
+        <div class="contacts">
+        <p><a href="/"><img src="imgs/linkedin.svg" alt="linkedin"></a>
+        <a href="/"><img src="imgs/basketball.svg" alt="basketball"></a>
+        <a href="/"><img src="imgs/facebook.svg" alt="facebook"></a>
+        <a href="https://www.instagram.com/iska.brtshka?vrfl=YnFnZngyeXl2bTEz"><img src="imgs/insta.svg" alt="instagram"></a>
+        <a href="/"><img src="imgs/twitter.svg" alt="twitter"></a></p>
+        </div>
     </div>
     </footer>
 </body>
