@@ -1,3 +1,7 @@
+html { scroll-behavior: smooth; }
+body { overflow-x: hidden; }
+img { max-width: 100%; }
+
 
 body {
      background-color: #1a1a1a;
@@ -523,35 +527,316 @@ hr {
 
 
 
-@media (max-width: 768px) {
-    h1 { font-size: 36px;}
-    h2 { font-size: 30px;}
-    #description-student br, #About br { display: none; }
-    #description-student, #About { padding: 0 20px; font-size: 16px; }
-    
-
-    .cards-container, .low-row {
-        grid-template-columns: 1fr;
-        margin-left: 20px;
-        margin-right: 20px;
-    }
-
-    .cardWithImage { flex-direction: column; }
-    .card-image { width: 100%; }
-
-    .projects-container { grid-template-columns: 1fr; padding: 0 20px; }
-    
-    #inputFieldset {padding: 0 20px; box-sizing: border-box; }
-
-    .email-badge { flex-direction: column; padding: 30px 20px; }
-    .email-badge h1 {font-size: 36px; }
-    .email-badge a { font-size: 14px; }
-    .contact-buttons { flex-direction: column; align-items: center; gap: 20px; }
-    .contacts { gap: 20px; }
+/* бургер скрыт на десктопе */
+.burger {
+    display: none;
+    background: none;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+.burger span {
+    display: block;
+    height: 2px;
+    background: #ffffff;
+    border-radius: 2px;
 }
 
-@media (max-width: 480px) {
-    .contacts {
-        gap: 20px;
+
+/* ---------- Телефоны (как на макете) ---------- */
+@media (max-width: 768px) {
+
+    h2 {
+        font-size: 26px;
+        margin: 0 0 4px;
+        text-align: center;
     }
+    .description,
+    #Studies .description {
+        margin: 0 0 24px;
+        font-size: 12px;
+    }
+
+    /* --- шапка: логотип слева, бургер справа --- */
+    .navbar {
+        position: relative;
+        z-index: 20;
+        padding: 16px 20px;
+        margin-top: 0;
+    }
+    .nav-left { gap: 0; }
+    .logo { margin: 0; font-size: 26px; }
+    .logo p { margin: 0; }
+    .btn-contact,
+    .theme-toggle-container { display: none; }
+
+    .burger {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 5px;
+    }
+    .burger span:nth-child(1) { width: 20px; }
+    .burger span:nth-child(2) { width: 13px; }
+
+    /* выпадающее меню */
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+        margin: 0;
+        padding: 6px 0;
+        background: #1a1a1a;
+        border-top: 1px solid #313131;
+        border-bottom: 1px solid #313131;
+    }
+    .navbar.open .nav-links { display: flex; }
+    .nav-links a {
+        width: 100%;
+        padding: 14px 0;
+        text-align: center;
+        font-size: 16px;
+    }
+
+    /* --- главный экран --- */
+    #Home { margin-top: 24px; padding: 0 20px; }
+    .background-image {
+        top: 60px;
+        height: 640px;
+        object-fit: cover;
+    }
+    .profile-image {
+        width: min(52vw, 220px);
+        height: auto;
+        margin-top: 24px;
+    }
+    h1 {
+        font-size: clamp(28px, 9.6vw, 40px);
+        line-height: 1.15;
+        text-align: center;
+        margin: 20px 0 0;
+    }
+    #student-title { font-size: 20px; }
+    #sticker { font-size: 18px; }
+    #description-student {
+        font-size: 14px;
+        line-height: 1.9;
+        padding: 0 8px;
+        margin-top: 14px;
+    }
+    #description-student br,
+    #About br { display: none; }
+
+    .top-buttons {
+        width: auto;
+        min-width: 150px;
+        height: 40px;
+        padding: 0 28px;
+        font-size: 13px;
+        margin-top: 12px;
+    }
+
+    /* --- about --- */
+    #About {
+        margin-top: 80px;
+        padding: 0 28px;
+        font-size: 13px;
+        line-height: 2;
+    }
+    #About p { margin: 0 0 8px; }
+
+    /* --- studies --- */
+    #Studies { margin-top: 80px; padding: 20px 0; }
+
+    .cards-container,
+    .low-row {
+        grid-template-columns: minmax(0, 1fr);
+        row-gap: 28px;
+        --side: clamp(24px, 12vw, 48px); /* общий боковой отступ */
+        --shift: 8px;                    /* на сколько сдвинуть карточки влево */
+        margin: 28px calc(var(--side) + var(--shift)) 0 calc(var(--side) - var(--shift));
+    }
+    .low-row { margin-top: 28px; }
+    .cards-container > *,
+    .low-row > * { min-width: 0; }
+
+    .card,
+    .cardWithImage {
+        width: 100%;
+        height: auto;
+        padding: 22px 20px;
+        border-radius: 8px;
+    }
+    .card-icon { margin-bottom: 14px; }
+    .card-icon img { width: 40px; height: 40px; }
+    .card h4,
+    .cardWithImage h4 {
+        font-size: 13px;
+        font-weight: 600;
+        margin: 0 0 10px;
+    }
+    .card p,
+    .cardWithImage p {
+        font-size: 12px;
+        line-height: 1.6;
+        margin: 0;
+    }
+
+    .cardWithImage {
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: flex-start;
+        gap: 18px;
+    }
+    .cardWithImage-content { min-width: 0; }
+    .card-image {
+        width: 100%;
+        height: auto;
+        flex-shrink: 1;
+    }
+    .card-image .card-image {
+        height: 170px;
+        border-radius: 3px;
+    }
+    .card-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    /* --- projects --- */
+    #Projects { margin-top: 80px; }
+    .project-tags {
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 28px;
+    }
+    .project-tags button {
+        font-size: 12px;
+        padding: 10px 18px;
+        border-color: #484e53;
+    }
+    .projects-container {
+        grid-template-columns: minmax(0, 1fr);
+        padding: 0 28px;
+        row-gap: 36px;
+        margin-top: 32px;
+    }
+    .project-cards {
+        height: auto;
+        justify-content: flex-start;
+    }
+    .project-cards img {
+        width: 100%;
+        height: auto;
+        border-radius: 4px;
+    }
+    .project-cards h4 {
+        margin: 18px 0 6px;
+        font-size: 16px;
+    }
+    .project-cards p {
+        margin: 0;
+        font-size: 13px;
+    }
+    .project-cards button {
+        width: 36px;
+        height: 36px;
+        padding: 0;
+        display: grid;
+        place-items: center;
+    }
+    .project-cards button img {
+        width: 18px;
+        height: 18px;
+        margin: 0;
+    }
+    .low-buttons { margin-top: 50px; }
+
+    /* --- форма --- */
+    #Contacts {
+        margin-top: 80px;
+        padding: 0 28px;
+    }
+    #inputFieldset {
+        padding: 0;
+        margin: 24px 0 0;
+        min-width: 0;
+        width: 100%;
+    }
+    .form-group {
+        margin-bottom: 12px;
+        min-width: 0;
+    }
+    label {
+        font-size: 14px;
+        margin-bottom: 8px;
+    }
+    .form-input {
+        height: 48px;
+        font-size: 14px;
+        border-radius: 8px;
+        max-width: 100%;
+    }
+    textarea.form-input { height: 125px; padding-top: 12px; }
+    .form-input::placeholder { font-size: 14px; }
+    .getNtouch {
+        height: 48px;
+        font-size: 14px;
+        border-radius: 8px;
+        margin-top: 12px;
+    }
+
+    /* --- футер --- */
+    footer { margin-top: 80px; }
+    .email-badge {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px 10px;
+        padding: 24px 20px;
+        margin-top: 0;
+    }
+    .email-badge h1 {
+        font-size: 15px;
+        line-height: 1.3;
+        letter-spacing: 1px;
+        text-align: left;
+        margin: 0;
+    }
+    .email-badge p { margin: 0; }
+    .email-badge a {
+        width: auto;
+        height: 30px;
+        margin: 0;
+        padding: 0 10px;
+        gap: 5px;
+        font-size: 10px;
+        border-width: 1px;
+        border-radius: 15px;
+    }
+    .badge-icon { width: 12px; height: 12px; }
+
+    .contact-buttons {
+        flex-direction: column-reverse; /* иконки сверху, копирайт снизу */
+        align-items: center;
+        gap: 20px;
+        margin: 28px 20px 24px;
+    }
+    .contact-buttons p { margin: 0; }
+    .AllRights { font-size: 11px; }
+    .contacts { justify-content: center; gap: 0; }
+    .contacts p {
+        display: flex;
+        gap: 18px;
+        justify-content: center;
+    }
+    .contacts a { margin: 0; }
+    .contacts img { width: 26px; height: 26px; }
 }
