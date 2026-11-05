@@ -524,11 +524,30 @@ hr {
 
 
 @media (max-width: 768px) {
-    .contact-buttons {
+    h1 { font-size: 36px;}
+    h2 { font-size: 30px;}
+    #description-student br, #About br { display: none; }
+    #description-student, #About { padding: 0 20px; font-size: 16px; }
+    
+
+    .cards-container, .low-row {
+        grid-template-columns: 1fr;
         margin-left: 20px;
         margin-right: 20px;
-        justify-content: center; 
     }
+
+    .cardWithImage { flex-direction: column; }
+    .card-image { width: 100%; }
+
+    .projects-container { grid-template-columns: 1fr; padding: 0 20px; }
+    
+    #inputFieldset {padding: 0 20px; box-sizing: border-box; }
+
+    .email-badge { flex-direction: column; padding: 30px 20px; }
+    .email-badge h1 {font-size: 36px; }
+    .email-badge a { font-size: 14px; }
+    .contact-buttons { flex-direction: column; align-items: center; gap: 20px; }
+    .contacts { gap: 20px; }
 }
 
 @media (max-width: 480px) {
