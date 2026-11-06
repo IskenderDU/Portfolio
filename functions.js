@@ -3,15 +3,13 @@ const burger = document.querySelector('.burger');
 
 function closeMenu() {
     header.classList.remove('open');
-    burger.setAttribute('aria-expanded', 'false');
 }
 
 burger.addEventListener('click', () => {
-    const isOpen = header.classList.toggle('open');
-    burger.setAttribute('aria-expanded', String(isOpen));
+    header.classList.toggle('open');
 });
 
-// закрывать меню после выбора пункта
+// закрывать меню после выбора
 document.querySelectorAll('.nav-links a').forEach((link) => {
     link.addEventListener('click', closeMenu);
 });
